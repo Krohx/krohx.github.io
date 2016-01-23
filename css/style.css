@@ -71,7 +71,7 @@ Main Components
   margin-right: 5%;
   width: 44px;
   height: 100%;
-  background: url("../assets/cd-icon-menu.svg") no-repeat center center;
+  background: url("../image/cd-icon-menu.svg") no-repeat center center;
 }
 .cd-primary-nav ul {
   position: absolute;
@@ -213,23 +213,24 @@ Single slide style
   background-repeat: no-repeat;
 }
 .cd-hero-slider li:first-of-type {
-  background-color: #2c343b;
+   background-color: #2c343b;
+  background-image: url(../image/img.jpg);
 }
 .cd-hero-slider li:nth-of-type(2) {
   background-color: #3d4952;
-  background-image: url("../assets/tech-1-mobile.jpg");
+  background-image: url("../image/tech-1-mobile.jpg");
 }
 .cd-hero-slider li:nth-of-type(3) {
   background-color: #586775;
-  background-image: url("../assets/tech-2-mobile.jpg");
+  background-image: url("../image/tech-2-mobile.jpg");
 }
 .cd-hero-slider li:nth-of-type(4) {
-  background-color: #2c343b;
-  background-image: url("../assets/video-replace-mobile.jpg");
+    background-color: #2c343b;
+  background-image: url(../image/img.jpg);
 }
 .cd-hero-slider li:nth-of-type(5) {
   background-color: #2c343b;
-  background-image: url(../assets/img.jpg);
+  background-image: url(../image/img.jpg);
 }
 .cd-hero-slider .cd-full-width,
 .cd-hero-slider .cd-half-width {
@@ -604,7 +605,7 @@ Slider navigation
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
-  background: url(../assets/cd-icon-navigation.svg) no-repeat 0 0;
+  background: url(../image/cd-icon-navigation.svg) no-repeat 0 0;
 }
 .no-touch .cd-slider-nav a:hover {
   background-color: rgba(0, 1, 1, 0.5);

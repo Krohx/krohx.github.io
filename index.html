@@ -7,68 +7,167 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/bootstrap.css"> 
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/form.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
-	<title>Hero Slideshow</title>
+	<title>Krohx</title>
 </head>
 <body>
 	<header class="cd-header">
-		<div id="cd-logo"><a href="#0"><img src="assets/cd-logo.svg" alt="Logo"></a></div>
+		<div id="cd-logo"><a href="#0"><img src="image/cd-logo.svg" alt="Logo"></a></div>
 
 		<nav class="cd-primary-nav">
 			<ul>
 				<li><a href="#0">Home</a></li>
 				<li><a href="#0">Portfolio</a></li>
-				<li><a href="#0">Contact</a></li>
-			</ul>
+				<li><a href="#0" data-toggle="modal" data-target=".bs-example-modal-lg">Contact</a></li>
 		</nav> <!-- .cd-primary-nav -->
 	</header>
+			</ul>
+			
+			<!-- Large modal -->
 
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	<div class="flat-p-form p-form-flat-orange form-options">
+	        <input id="form-options-check" class="hide p-show-check"
+	        type="checkbox">
+	        <label for="form-options-check" class="btn p-popup-form p-fixed p-pos-left"><i class="fa fa-cogs"></i></label>
+	        <div id="form-options" class="p-action-block">
+
+	        </div>
+	    </div>
+      <div class="wrap-offset">
+	<div class="container-fluid">
+		<form class="modern-p-form p-form-modern-purple"
+		novalidate="novalidate" id="p-form-skin"
+		method="post" action="#0"
+		data-js-validate="true" data-js-highlight-state-msg="true"
+		data-js-show-valid-msg="true" data-js-ajax-form=""
+		data-js-ajax-before-hide-block="successBlockName;failBlockName"
+		data-js-ajax-before-show-block="loadingBlockName"
+		data-js-ajax-success-show-block="successBlockName"
+		data-js-ajax-success-hide-block="formBlockName"
+		data-js-ajax-fail-show-block="failBlockName"
+		data-js-ajax-always-hide-block="loadingBlockName">
+			<div data-base-class="p-form" class="p-form p-shadowed p-form-sm">
+				<div class="p-title" data-base-class="p-title"><span class="p-title-line" data-p-role="title">Contact us&nbsp;&nbsp;<i class="fa fa-envelope-o"></i></span></div>
+				<div data-js-block="successBlockName" class="collapse">
+					<h4>Form data send successfully!</h4>
+					<div data-js-block="successContentBlock"
+					class="collapse"></div>
+					<div class="preview-btn text-right p-buttons"><a href="./ajax-form-contact.html" class="btn">reload</a></div>
+				</div>
+				<div data-js-block="failBlockName" class="collapse">
+					<h4>Form data send failed!</h4>
+					<div data-js-block="errorContentBlock" class="collapse"></div>
+				</div>
+				<div data-js-block="formBlockName">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="name" class="p-label-required">Name</label>
+								<div class="input-group p-has-icon">
+									<input id="name" name="name" placeholder="Name"
+									required="required" class="form-control"
+									type="text"> <span class="input-group-state"><span class="p-position"><span class="p-text"><span class="p-required-text"><i class="fa fa-star"></i></span></span>
+									</span>
+									</span> <span class="p-field-cb"></span>									<span class="input-group-icon"><i class="fa fa-user"></i></span></div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="email" class="p-label-required">Email</label>
+								<div class="input-group p-has-icon">
+									<input id="email" name="email" placeholder="your@mail.com"
+									required="required" class="form-control"
+									type="email"> <span class="input-group-state"><span class="p-position"><span class="p-text"><span class="p-required-text"><i class="fa fa-star"></i></span></span>
+									</span>
+									</span> <span class="p-field-cb"></span>									<span class="input-group-icon"><i class="fa fa-envelope-o"></i></span></div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="subject" class="p-label-required">Subject</label>
+						<div class="input-group p-has-icon">
+							<input id="subject" name="subject" placeholder="Subject"
+							required="required" class="form-control"
+							type="text"> <span class="input-group-state"><span class="p-position"><span class="p-text"><span class="p-required-text"><i class="fa fa-star"></i></span></span>
+							</span>
+							</span> <span class="p-field-cb"></span>
+							<span
+							class="input-group-icon"><i class="fa fa-tag"></i></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="message" class="p-label-required">Message</label>
+						<div class="input-group p-has-icon">
+							<textarea id="message" name="message" required="required"
+							class="form-control"></textarea><span class="input-group-state"><span class="p-position"><span class="p-text"><span class="p-required-text"><i class="fa fa-star"></i></span></span>
+							</span>
+							</span> <span class="p-field-cb"></span>
+							<span
+							class="input-group-icon"><i class="fa fa-file-text-o"></i></span>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div data-js-block="loadingBlockName" class="progress collapse">
+						<div class="progress-bar progress-bar-fp progress-bar-striped active"
+						role="progressbar" aria-valuenow="100"
+						aria-valuemin="0" aria-valuemax="100"
+						style="width: 100%"></div>
+					</div>
+					<div class="preview-btn text-right p-buttons">
+						<button class="btn" type="submit" name="confirm"><i class="fa fa-paper-plane"></i>&nbsp;&nbsp;send
+							message</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</div>
 	<section class="cd-hero">
 		<ul class="cd-hero-slider autoplay">
 			<li class="selected">
-				<div class="cd-full-width">
-					<h2>Hero slider</h2>
-					<p>A simple, responsive slideshow in CSS &amp; jQuery.</p>
-					<a href="#0" class="cd-btn">Article &amp; Download</a>
-				</div> <!-- .cd-full-width -->
+				<div class="cd-half-width cd-img-container">
+					<img src="image/Screenshot from 2016-01-22 18:59:13.png" alt="tech 2">
+				</div> <!-- .cd-half-width.cd-img-container -->
+
+				<div class="cd-half-width">
+					<h2>Database Development</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
+					<a href="#0" class="cd-btn">Start</a>
+					<a href="#0" class="cd-btn secondary">Learn More</a>
+				</div> <!-- .cd-half-width -->
 			</li>
 
 			<li>
 				<div class="cd-half-width">
-					<h2>Slide title here</h2>
+					<h2>Web Development</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
 					<a href="#0" class="cd-btn">Start</a>
 					<a href="#0" class="cd-btn secondary">Learn More</a>
 				</div> <!-- .cd-half-width -->
 
 				<div class="cd-half-width cd-img-container">
-					<img src="assets/freebie___3d_web_presentation_mock_up_by_graphberry-d88jove.png" height="300" alt="tech 1">
+					<img src="image/Screenshot from 2016-01-22 18:53:50.png" alt="tech 1" height="500">
 				</div> <!-- .cd-half-width.cd-img-container -->
 			</li>
 
 			<li>
 				<div class="cd-half-width cd-img-container">
-					<img src="assets/tech-2.jpg" alt="tech 2">
+					<img src="image/9.png" alt="tech 2">
 				</div> <!-- .cd-half-width.cd-img-container -->
 
 				<div class="cd-half-width">
-					<h2>Slide title here</h2>
+					<h2>Database Development</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
 					<a href="#0" class="cd-btn">Start</a>
 					<a href="#0" class="cd-btn secondary">Learn More</a>
 				</div> <!-- .cd-half-width -->
 				
-			</li>
-
-			<li>
-				<div class="cd-full-width">
-					<h2>Slide title here</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
-					<a href="#0" class="cd-btn">Start</a>
-					<a href="#0" class="cd-btn secondary">Learn More</a>
-				</div> <!-- .cd-full-width -->
 			</li>
 		</ul> <!-- .cd-hero-slider -->
 
@@ -96,12 +195,15 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit veniam quisquam, rem illum dicta cumque, voluptate fugiat impedit beatae rerum ratione, voluptates nisi magni delectus ab, eaque atque iste. Molestias incidunt nemo veniam alias nam nisi distinctio optio error architecto odit! Illo dicta nulla fugiat distinctio laudantium, corrupti eum unde.
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit veniam quisquam, rem illum dicta cumque, voluptate fugiat impedit beatae rerum ratione, voluptates nisi magni delectus ab, eaque atque iste. Molestias incidunt nemo veniam alias nam nisi distinctio optio error architecto odit! Illo dicta nulla fugiat distinctio laudantium, corrupti eum unde.
 		</p>
+
+		
 	</main> <!-- .cd-main-content -->
 	
 <script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/forms-plus.js"></script>
+<script src="js/forms-plus-validation.js"></script> 
+<script src="js/livepreview.js"></script> 
 </body>
 </html>
-
-
-
