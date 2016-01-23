@@ -672,12 +672,12 @@ Main content
 .cd-main-content p {
   font-size: 1.4rem;
   line-height: 1.8;
-  color: #999999;
+  color: #3C3A3A;
   margin: 2em 0;
 }
 @media only screen and (min-width: 1170px) {
   .cd-main-content {
-    padding: 3em 0;
+    padding: 1em 0;
   }
   .cd-main-content p {
     font-size: 1.6rem;
@@ -698,4 +698,71 @@ Javascript disabled
 
 .no-js .cd-slider-nav {
   display: none;
+}
+
+.sub {
+    background: #00586E url("../image/sub_skew_bg.png") no-repeat scroll center center / cover;
+}
+.section_wrapper {
+    width: 100%;
+}
+.container {
+    position: relative;
+    width: 960px;
+    margin: 0px auto;
+    padding: 0px;
+}
+.container .columns {
+    float: left;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.section_wrapper h3 {
+    color: #FFF;
+    font-size: 28px;
+    line-height: 28px;
+    font-family: "Titillium web",sans-serif;
+    font-weight: 100;
+    margin: 30px;
+}
+.container .eight.columns {
+    width: 460px;
+}
+
+h3 {
+    font-size: 21px;
+    line-height: 30px;
+    margin-bottom: 4px;
+    color: #528E42;
+    font-family: Georgia,serif;
+}
+h3, h4, h5 {
+    color: #00759B;
+    font-family: Georgia,serif;
+    font-weight: 400;
+    text-decoration: none !important;
+}
+.section_wrapper p {
+    font-size: 20px;
+    margin: 30px;
+    font-family: Calibri,Helvetica,sans-serif;
+}
+.white a, .white {
+    color: #FFF;
+}
+a.white.button {
+    color: #333 !important;
+    padding: 7px 12px;
+    display: inline-block;
+    font-family: "titillium web",sans-serif;
+    font-weight: 100;
+    font-size: 21px;
+    text-decoration: none;
+    cursor: pointer;
+    width: auto;
+    border-radius: 3px;
+    margin: 30px;
+    background: rgba(255, 255, 255, 0.3) none repeat scroll 0% 0%;
+    border: 2px solid rgba(255, 255, 255, 0.8);
 }
