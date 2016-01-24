@@ -4,32 +4,35 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/bootstrap.css"> 
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="css/style2.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="css/form.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/portfolio.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/form.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
+	 
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
-	<title>Krohx</title>
+	<title>Krohx - Portfolio</title>
 </head>
 <body>
-	<header class="cd-header">
+	<header>
 		<div id="cd-logo"><a href="#0"><img src="image/cd-logo.svg" alt="Logo"></a></div>
-
-		<nav class="cd-primary-nav">
-			<ul>
-				<li><a href="#0">Home</a></li>
-				<li><a href="portfolio.html">Portfolio</a></li>
-				<li><a href="#0" data-toggle="modal" data-target=".bs-example-modal-lg">Contact</a></li>
-		</nav> <!-- .cd-primary-nav -->
 	</header>
+
+	<div id="cd-nav">
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+		<nav id="cd-main-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#0">Portfolio</a></li>
+				<li><a href="#0" data-toggle="modal" data-target=".bs-example-modal-lg">Contact</a></li>
 			</ul>
-			
-			<!-- Large modal -->
+		</nav>
+	</div>
+	<!-- Large modal -->
 
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 	<div class="flat-p-form p-form-flat-orange form-options">
@@ -130,94 +133,48 @@
 	</div>
 </div>
 </div>
-	<section class="cd-hero">
-		<ul class="cd-hero-slider autoplay">
-			<li class="selected">
-				<div class="cd-half-width cd-img-container">
-					<img src="image/Screenshot from 2016-01-22 18:59:13.png" alt="tech 2">
-				</div> <!-- .cd-half-width.cd-img-container -->
-
-				<div class="cd-half-width">
-					<h2>Database Development</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
-					<a href="#0" class="cd-btn">Start</a>
-					<a href="#0" class="cd-btn secondary">Learn More</a>
-				</div> <!-- .cd-half-width -->
+	<main>
+		<ul id="cd-gallery-items" class="cd-container">
+			<li>
+				<img src="image/Screenshot from 2016-01-22 20:53:33.png" alt="Preview image">
 			</li>
 
 			<li>
-				<div class="cd-half-width">
-					<h2>Web Development</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
-					<a href="#0" class="cd-btn">Start</a>
-					<a href="#0" class="cd-btn secondary">Learn More</a>
-				</div> <!-- .cd-half-width -->
-
-				<div class="cd-half-width cd-img-container">
-					<img src="image/Screenshot from 2016-01-22 18:53:50.png" alt="tech 1" height="500">
-				</div> <!-- .cd-half-width.cd-img-container -->
+				<img src="image/Screenshot from 2016-01-22 20:49:49.png" alt="Preview image">
 			</li>
 
 			<li>
-				<div class="cd-half-width cd-img-container">
-					<img src="image/9.png" alt="tech 2">
-				</div> <!-- .cd-half-width.cd-img-container -->
-
-				<div class="cd-half-width">
-					<h2>Database Development</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
-					<a href="#0" class="cd-btn">Start</a>
-					<a href="#0" class="cd-btn secondary">Learn More</a>
-				</div> <!-- .cd-half-width -->
-				
+				<img src="image/Screenshot from 2016-01-22 20:51:49.png" alt="Preview image">
 			</li>
-		</ul> <!-- .cd-hero-slider -->
 
-		<div class="cd-slider-nav">
-			<nav>
-				<!-- <span class="cd-marker item-1"></span>
-				
-				<ul>
-					<li class="selected"><a href="#0">Intro</a></li>
-					<li><a href="#0">Tech 1</a></li>
-					<li><a href="#0">Tech 2</a></li>
-					<li><a href="#0">Video</a></li>
-					<li><a href="#0">Image</a></li>
-				</ul> -->
-			</nav> 
-		</div> <!-- .cd-slider-nav -->
-	</section> <!-- .cd-hero -->
+			<li>
+				<img src="image/Screenshot from 2016-01-22 20:53:10.png" alt="Preview image">
+			</li>
 
-	<main class="cd-main-content">
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit veniam quisquam, rem illum dicta cumque, voluptate fugiat impedit beatae rerum ratione, voluptates nisi magni delectus ab, eaque atque iste. Molestias incidunt nemo veniam alias nam nisi distinctio optio error architecto odit! Illo dicta nulla fugiat distinctio laudantium, corrupti eum unde.
-		</p>
-	</main> <!-- .cd-main-content -->
-	
-	<div  class="section_wrapper sub">
+			<li>
+				<img src="image/Screenshot from 2016-01-22 20:54:18.png" alt="Preview image">
+			</li>
 
-	<div class="container">
+			<li>
+				<img src="image/Screenshot from 2016-01-22 20:56:05.png" alt="Preview image">
+			</li>
 
+			<li>
+				<img src="image/Screenshot from 2016-01-22 21:03:29.png" alt="Preview image">
+			</li>
 
-		<div class="eight columns">
-			<h3>Application Development & Development Platforms</h3>
-			<p class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit veniam quisquam, rem illum dicta cumque, voluptate fugiat impedit.</p>
-			<!-- <a href="#0"
-			class="white button">Learn More</a> -->
-		</div>
-		<div class="eight columns">
-			<h3>UI Development Tools</h3>
-			<p class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit veniam quisquam, rem illum dicta cumque, voluptate fugiat impedit</p>
-			<!-- <a href="#0"
-			class="white button">Learn More</a> -->
-		</div>
+			<li>
+				<img src="image/Screenshot from 2016-01-22 18:59:13.png" alt="Preview image">
+			</li>
 
-	</div>
-
-</div>
+			<li>
+				<img src="image/Screenshot from 2016-01-22 21:05:51.png" alt="Preview image">
+			</li>
+		</ul> <!-- cd-gallery-items -->
+	</main>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/portfolio.js"></script> <!-- Resource jQuery -->
 <script src="js/forms-plus.js"></script>
 <script src="js/forms-plus-validation.js"></script> 
 <script src="js/livepreview.js"></script> 

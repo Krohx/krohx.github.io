@@ -772,7 +772,7 @@ a.white.button {
     font-family: "source_sans_proregular";
 }
 .main {
-    width: 951px;
+    width: 100%;
     margin: 0px auto;
 }
 #footer .footer-left {
