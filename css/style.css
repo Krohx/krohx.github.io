@@ -766,3 +766,95 @@ a.white.button {
     background: rgba(255, 255, 255, 0.3) none repeat scroll 0% 0%;
     border: 2px solid rgba(255, 255, 255, 0.8);
 }
+#footer {
+    background: #505050 none repeat scroll 0% 0%;
+    padding: 35px 0px 70px;
+    font-family: "source_sans_proregular";
+}
+.main {
+    width: 951px;
+    margin: 0px auto;
+}
+#footer .footer-left {
+    float: left;
+    font-size: 11px;
+    color: #949495;
+}
+#footer .footer-left ul {
+    list-style: outside none none;
+    float: left;
+}
+#footer .footer-left ul li {
+    float: left;
+    margin-right: 15px;
+    line-height: 20px;
+}
+}
+#footer .footer-left ul li a {
+    text-decoration: none;
+    color: #4D4D4F;
+}
+}
+#footer .social-icons {
+    float: right;
+}
+#footer .social-icons ul {
+    list-style: outside none none;
+}
+#footer .social-icons ul li {
+    float: left;
+    font-size: 11px;
+    color: #949495;
+    margin-right: 15px;
+    line-height: 20px;
+}
+#footer .social-icons ul li {
+    float: left;
+    font-size: 11px;
+    color: #949495;
+    margin-right: 15px;
+    line-height: 20px;
+}
+#footer .social-icons ul li a.facebook {
+    background-position: -572px 0px;
+}
+#footer .social-icons ul li a {
+    background: transparent url("../image/sprite.png") no-repeat scroll 0% 0%;
+    text-indent: -999999px;
+    display: block;
+    height: 26px;
+    width: 31px;
+}
+#footer .social-icons ul li a.twitter {
+    background-position: -608px 0px;
+}
+#footer .social-icons ul li a {
+    background: transparent url("../image/sprite.png") no-repeat scroll 0% 0%;
+    text-indent: -999999px;
+    display: block;
+    height: 26px;
+    width: 31px;
+}
+a {
+    text-decoration: none;
+}
+#footer .social-icons ul li a.youtube {
+    background-position: -655px 0px;
+}
+#footer .social-icons ul li a {
+    background: transparent url("../image/sprite.png") no-repeat scroll 0% 0%;
+    text-indent: -999999px;
+    display: block;
+    height: 26px;
+    width: 31px;
+}
+#footer .social-icons ul li a.in {
+    background-position: -706px 0px;
+}
+#footer .social-icons ul li a {
+    background: transparent url("../image/sprite.png") no-repeat scroll 0% 0%;
+    text-indent: -999999px;
+    display: block;
+    height: 26px;
+    width: 31px;
+}
