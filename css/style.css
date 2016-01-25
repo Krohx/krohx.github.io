@@ -59,6 +59,14 @@ Main Components
 #cd-logo img {
   display: block;
 }
+#cd-logo img {
+    width: 50px;
+}
+@media only screen and (min-width: 768px) {
+  #cd-logo img {
+    width: 90px;
+}
+}
 @media only screen and (min-width: 768px) {
   #cd-logo {
     margin: 23px 0 0 5%;
