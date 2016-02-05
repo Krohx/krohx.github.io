@@ -590,3 +590,7 @@ nav#footer p{
     border-color: #E7E7E7;
     text-align: center;
 }
+
+.navbar-brand{
+	height:auto;
+}
