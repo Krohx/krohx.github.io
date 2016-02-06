@@ -102,6 +102,8 @@ font-weight: 900;
 	color: #FCAC45 !important;
 	background-color: transparent;
 	font-weight: 700;
+	background: rgba(0, 0, 0, 0.4) none repeat scroll 0% 0%;
+    transition: background 0.1s ease 0s;
 }
 
 .navbar-toggle {
@@ -412,7 +414,7 @@ ol.type li a.active { font-weight: 700; }
 	color: #ffffff;
 	background: rgba(0, 0, 0, 0.66);
 	padding: 25% 0;
-	height: 100%;
+	height: 70%;
 	width: 100%;
 	opacity: 0;
     transition: all 0.5s;
@@ -589,4 +591,16 @@ nav#footer p{
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #E7E7E7;
     text-align: center;
+}
+.headletter{
+	letter-spacing: -4px;
+    line-height: 1;
+    font-size: 4em;
+    font-family: Montserrat,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.lead {
+    font-family: Noto Serif,Georgia,Times,Times New Roman,serif;
+    font-style: italic;
+    line-height: 1.4em;
+    font-size: 1.7em;
 }
