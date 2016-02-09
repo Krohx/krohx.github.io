@@ -130,7 +130,7 @@ font-weight: 900;
 	}
 /* Home Style */
 #tf-home{
-	background: url(../img/01.jpg);
+	background: url(../img/laptop-at-night-1114387_960_720.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -319,7 +319,7 @@ img.img-circle.team-img {
 
 /* Clients Section */
 #tf-clients{
-	background: url(../img/04.jpg);
+	background: url(../img/clients.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
