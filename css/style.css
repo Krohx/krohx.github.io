@@ -718,3 +718,15 @@ canvas{
     margin-top: 10px;
     border-radius: 4px;
 }
+.navbar-right {
+    float: right !important;
+    margin-right: -15px;
+    margin-top: 7px;
+}
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 10px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
