@@ -44,7 +44,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body> 
+ <!--  <div id="tf-home" class="text-center">
+  
+  </div> -->
     <!-- Navigation
     ==========================================-->
     <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
@@ -80,13 +83,19 @@
     <div id="tf-home" class="text-center">
         <div class="overlay">
             <div class="content">
-                <h1>The <strong>Future </strong>looks <strong><span class="color">Bright. </span></strong></h1>
-                <p class="lead">Why not <strong>journey there with us. </strong><strong></strong></p>
+                <div id="particles-js" class="text-center"> 
+                    <div style="display: block;" class="panel">
+                    <h1>The <strong>Future </strong>looks <strong><span class="color">Bright. </span></strong></h1>
+                    <p class="lead">Why not <strong>journey there with us. </strong><strong></strong></p>
 
-                <a href="#tf-about" class="fa fa-angle-down page-scroll"></a>
+                <a href="#tf-about" class="fa fa-angle-down page-scroll"></a>    
+</div>
+  </div>
+</div>
             </div>
         </div>
     </div>
+
 
     <!-- About Us Page
     ==========================================-->
@@ -580,6 +589,34 @@
     <!-- Javascripts
     ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
+
+
+
+    <script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+
+<!-- stats.js -->
+<script src="js/lib/stats.js"></script>
+<script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
 
   </body>
 </html>

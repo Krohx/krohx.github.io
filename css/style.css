@@ -154,8 +154,8 @@ font-weight: 900;
 }
 
 .content{
-	position: relative;
-	padding: 20% 0 0;
+	/*position: relative;
+	padding: 20% 0 0;*/
 }
 
 .color{
@@ -168,7 +168,7 @@ a.fa.fa-angle-down {
 	border: 2px solid #b4b4b4;
 	border-radius: 50%;
 	font-size: 24px;
-	margin-top: 200px;
+	margin-top: 120px;
 	transition: all 0.5s;
 }
 a.fa.fa-angle-down:hover{
@@ -613,4 +613,108 @@ nav#footer p{
   .container {
     width: 1300px;
   }
+}
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  display: none;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+	/*width: 100%;
+    height: 100%;
+	background: url('../img/laptop-at-night-1114387_960_720.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;*/
+	color: #cfcfcf;
+}
+
+.panel {
+    position: absolute;
+    background-color: transparent;
+    z-index: 10;
+    /*width: 50%;*/
+    height: 220px;
+    top: 70%;
+    left: 35%;
+    margin: -110px 0 0 -100px;
+    padding: 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+.panel h1 {
+    text-align: center;
+    margin-top: -4px;
+}
+.panel .r-version {
+    display: block;
+    margin-bottom: 7px;
+    text-align: center;
+}
+.panel h2 {
+    margin-bottom: 16px;
+    text-align: center;
+}
+.panel li {
+    text-align: center;
+    height: 34px;
+    margin-top: 10px;
+    border-radius: 4px;
 }
