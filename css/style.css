@@ -99,10 +99,10 @@ font-weight: 900;
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > a:focus {
-	color: #54b747 !important;
+	/*color: #54b747 !important;*/
 	background-color: transparent;
 	font-weight: 700;
-	background: rgba(0, 0, 0, 0.4) none repeat scroll 0% 0%;
+	/*background: rgba(0, 0, 0, 0.4) none repeat scroll 0% 0%;*/
     transition: background 0.1s ease 0s;
 }
 
@@ -719,7 +719,7 @@ canvas{
     border-radius: 4px;
 }
 .navbar-right {
-    float: right !important;
+   /* float: right !important;*/
     margin-right: -15px;
     margin-top: 7px;
 }

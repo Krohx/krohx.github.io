@@ -24,6 +24,7 @@
 
     <!-- Slider
     ================================================== -->
+
     <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
     <link href="css/owl.theme.css" rel="stylesheet" media="screen">
 
@@ -31,6 +32,7 @@
     ================================================== -->
     <link rel="stylesheet" type="text/css"  href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css"  href="css/component.css">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
@@ -50,7 +52,7 @@
   </div> -->
     <!-- Navigation
     ==========================================-->
-    <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
+    <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top menu menu--juliet">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -65,14 +67,14 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#tf-home" class="page-scroll">Home</a></li>
-            <li><a href="#tf-about" class="page-scroll">About</a></li>
-            <li><a href="#tf-team" class="page-scroll">Team</a></li>
-            <li><a href="#tf-services" class="page-scroll">Services</a></li>
-            <li><a href="#tf-works" class="page-scroll">Portfolio</a></li>
-            <li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>
-            <li><a href="#tf-contact" class="page-scroll">Contact</a></li>
+          <ul class="nav navbar-nav navbar-right menu__list">
+            <li class="menu__item menu__item--current" ><a href="#tf-home" class="page-scroll menu__link">Home</a></li>
+            <li class="menu__item"><a href="#tf-about" class="page-scroll menu__link">About</a></li>
+            <li class="menu__item"><a href="#tf-team" class="page-scroll menu__link">Team</a></li>
+            <li class="menu__item"><a href="#tf-services" class="page-scroll menu__link">Services</a></li>
+            <li class="menu__item"><a href="#tf-works" class="page-scroll menu__link">Portfolio</a></li>
+            <li class="menu__item"><a href="#tf-testimonials" class="page-scroll menu__link">Testimonials</a></li>
+            <li class="menu__item"><a href="#tf-contact" class="page-scroll menu__link">Contact</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -558,7 +560,6 @@
 
         </div>
     </div>
-
     <nav id="footer">
         <div class="container">
             <div class="pull-left fnav">
@@ -594,6 +595,43 @@
 
     <script src="js/particles.js"></script>
 <script src="js/app.js"></script>
+<script src="js/classie.js"></script>
+<script>
+        (function() {
+            [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+                var menuItems = menu.querySelectorAll('.menu__link'),
+                    setCurrent = function(ev) {
+                        ev.preventDefault();
+
+                        var item = ev.target.parentNode; // li
+
+                        // return if already current
+                        if (classie.has(item, 'menu__item--current')) {
+                            return false;
+                        }
+                        // remove current
+                        classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+                        // set current
+                        classie.add(item, 'menu__item--current');
+                    };
+
+                [].slice.call(menuItems).forEach(function(el) {
+                    el.addEventListener('click', setCurrent);
+                });
+            });
+
+            [].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+                link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+                new Clipboard(link);
+                link.addEventListener('click', function() {
+                    classie.add(link, 'link-copy--animate');
+                    setTimeout(function() {
+                        classie.remove(link, 'link-copy--animate');
+                    }, 300);
+                });
+            });
+        })(window);
+        </script>
 
 <!-- stats.js -->
 <script src="js/lib/stats.js"></script>
@@ -616,6 +654,7 @@
   };
   requestAnimationFrame(update);
 </script>
+
 
 
   </body>
