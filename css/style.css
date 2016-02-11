@@ -161,7 +161,6 @@ font-weight: 900;
 .color{
 	color: #54b747;
 }
-
 a.fa.fa-angle-down {
 	padding: 10px 15px;
 	color: #fff;
@@ -569,14 +568,14 @@ nav#footer p{
 	margin-top: 10px;
 }
 #footer i.fa {
-	height: 30px;
-	width: 30px;
-	border: 2px solid #8c8c8c;
-	font-size: 20px;
-	padding: 4px 5px;
-	border-radius: 50%;
-	color: #8c8c8c;
-	transition: all 0.5s;
+    height: 35px;
+    width: 35px;
+    border: 2px solid #8c8c8c;
+    font-size: 20px;
+    padding: 5px 5px;
+    border-radius: 50%;
+    color: #8c8c8c;
+    transition: all 0.5s;
 }
 #footer i.fa:hover{
 	background: #54b747;
