@@ -1,0 +1,40 @@
+
+.overlay{
+	background: -webkit-linear-gradient(60deg, #556270 10%, #114C7E 90%); /* Chrome 10+, Saf5.1+ */
+  	background:    -moz-linear-gradient(60deg, #556270 10%, #114C7E 90%); /* FF3.6+ */
+  	background:     -ms-linear-gradient(60deg, #556270 10%, #114C7E 90%); /* IE10 */
+  	background:      -o-linear-gradient(60deg, #556270 10%, #114C7E 90%); /* Opera 11.10+ */
+  	background:         linear-gradient(60deg, #556270 10%, #114C7E 90%); /* W3C */
+}
+/*-- ========== CLOSE INFO & BACK TO TOP ============ --*/
+.info-container .hover-effect-1 a:hover:after,
+.info-container .hover-effect-1 a:hover:before{
+	background:#d96459;
+}
+.info-container .close-link a:hover,
+.info-container .backtop-link a:hover
+{
+	color:#d96459;
+}
+/*-- ========== SERVICE & CONTACT ICON ============ --*/
+.about .about-services .service-container:hover .services .name,
+.about .about-services .service-container:hover .services .icon,
+.contact-location .location-container:hover .location .icon,
+.contact-location .location-container:hover .location .name
+{
+	color:#d96459;
+}
+/*-- ========== FORM & BUTTON ============ --*/
+button[type="submit"].submit-subscribe:hover{
+	background:#d96459;
+	color:white;
+}
+button[type="submit"].submit-message:hover{
+	background:#d96459;
+	color:white;
+	border:1px solid #d96459;
+}
+input[type="text"]:focus, textarea:focus{
+	border-bottom:1px solid #d96459;
+}
+

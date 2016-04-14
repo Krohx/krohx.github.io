@@ -1,0 +1,10 @@
+gitnore
+temp.py
+*~
+*.swp
+*.pyc
+*.orig
+.hg
+*hgignore*
+*zedstate*
+*.sqlite
