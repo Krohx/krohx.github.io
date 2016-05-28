@@ -1,128 +1,113 @@
-// Hello.
-//
-// This is The Scripts used for ___________ Theme
-//
-//
+jQuery(document).ready(function($){
+      
+      $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
 
-function main() {
+    if (scroll == 0) {
+        $(".wowmenu").removeClass("top");
+    } else {
+        $(".wowmenu").addClass("top");
+    }
+});
 
-(function () {
-   'use strict';
+	var slidesWrapper = $('.cd-hero-slider');
 
-   /* ==============================================
-  	Testimonial Slider
-  	=============================================== */ 
+	//check if a .cd-hero-slider exists in the DOM 
+	if ( slidesWrapper.length > 0 ) {
+		var primaryNav = $('.cd-primary-nav'),
+			sliderNav = $('.cd-slider-nav'),
+			navigationMarker = $('.cd-marker'),
+			slidesNumber = slidesWrapper.children('li').length,
+			visibleSlidePosition = 0,
+			autoPlayId,
+			autoPlayDelay = 5000;
 
-  	$('a.page-scroll').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 40
-            }, 900);
-            return false;
-          }
-        }
-      });
+		//upload videos (if not on mobile devices)
+		uploadVideo(slidesWrapper);
 
-    /*====================================
-    Show Menu on Book
-    ======================================*/
-    $(window).bind('scroll', function() {
-        var navHeight = $(window).height() - 100;
-        if ($(window).scrollTop() > navHeight) {
-            $('.navbar-default').addClass('on');
-        } else {
-            $('.navbar-default').removeClass('on');
-        }
-    });
+		//autoplay slider
+		setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
 
-    $('body').scrollspy({ 
-        target: '.navbar-default',
-        offset: 80
-    })
+		//on mobile - open/close primary navigation clicking/tapping the menu icon
+		primaryNav.on('click', function(event){
+			if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
+		});
+		
+		//change visible slide
+		sliderNav.on('click', 'li', function(event){
+			event.preventDefault();
+			var selectedItem = $(this);
+			if(!selectedItem.hasClass('selected')) {
+				// if it's not already selected
+				var selectedPosition = selectedItem.index(),
+					activePosition = slidesWrapper.find('li.selected').index();
+				
+				if( activePosition < selectedPosition) {
+					nextSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, selectedPosition);
+				} else {
+					prevSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, selectedPosition);
+				}
 
-  	$(document).ready(function() {
-  	  $("#team").owlCarousel({
-  	 
-  	      navigation : false, // Show next and prev buttons
-  	      slideSpeed : 300,
-  	      paginationSpeed : 400,
-  	      autoHeight : true,
-  	      itemsCustom : [
-				        [0, 1],
-				        [450, 2],
-				        [600, 2],
-				        [700, 2],
-				        [1000, 4],
-				        [1200, 4],
-				        [1400, 4],
-				        [1600, 4]
-				      ],
-  	  });
+				//this is used for the autoplay
+				visibleSlidePosition = selectedPosition;
 
-  	  $("#clients").owlCarousel({
-  	 
-  	      navigation : false, // Show next and prev buttons
-  	      slideSpeed : 300,
-  	      paginationSpeed : 400,
-  	      autoHeight : true,
-  	      itemsCustom : [
-				        [0, 1],
-				        [450, 2],
-				        [600, 2],
-				        [700, 2],
-				        [1000, 4],
-				        [1200, 5],
-				        [1400, 5],
-				        [1600, 5]
-				      ],
-  	  });
+				updateSliderNavigation(sliderNav, selectedPosition);
+				updateNavigationMarker(navigationMarker, selectedPosition+1);
+				//reset autoplay
+				setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
+			}
+		});
+	}
 
-      $("#testimonial").owlCarousel({
-        navigation : false, // Show next and prev buttons
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem:true
-        });
+	
+	function autoplaySlider(length) {
+		if( visibleSlidePosition < length - 1) {
+			nextSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, visibleSlidePosition + 1);
+			visibleSlidePosition +=1;
+		} else {
+			prevSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, 0);
+			visibleSlidePosition = 0;
+		}
+		updateNavigationMarker(navigationMarker, visibleSlidePosition+1);
+		updateSliderNavigation(sliderNav, visibleSlidePosition);
+	}
 
-  	});
+	function uploadVideo(container) {
+		container.find('.cd-bg-video-wrapper').each(function(){
+			var videoWrapper = $(this);
+			if( videoWrapper.is(':visible') ) {
+				// if visible - we are not on a mobile device 
+				var	videoUrl = videoWrapper.data('video'),
+					video = $('<video loop><source src="'+videoUrl+'.mp4" type="video/mp4" /><source src="'+videoUrl+'.webm" type="video/webm" /></video>');
+				video.appendTo(videoWrapper);
+				// play video if first slide
+				if(videoWrapper.parent('.cd-bg-video.selected').length > 0) video.get(0).play();
+			}
+		});
+	}
 
-  	/*====================================
-    Portfolio Isotope Filter
-    ======================================*/
-    $(window).load(function() {
-        var $container = $('#lightbox');
-        $container.isotope({
-            filter: '*',
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false
-            }
-        });
-        $('.cat a').click(function() {
-            $('.cat .active').removeClass('active');
-            $(this).addClass('active');
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-            return false;
-        });
+	function checkVideo(hiddenSlide, container, n) {
+		//check if a video outside the viewport is playing - if yes, pause it
+		var hiddenVideo = hiddenSlide.find('video');
+		if( hiddenVideo.length > 0 ) hiddenVideo.get(0).pause();
 
-    });
+		//check if the select slide contains a video element - if yes, play the video
+		var visibleVideo = container.children('li').eq(n).find('video');
+		if( visibleVideo.length > 0 ) visibleVideo.get(0).play();
+	}
 
+	function updateNavigationMarker(marker, n) {
+		marker.removeClassPrefix('item').addClass('item-'+n);
+	}
 
-
-}());
-
-
-}
-main();
+	$.fn.removeClassPrefix = function(prefix) {
+		//remove all classes starting with 'prefix'
+	    this.each(function(i, el) {
+	        var classes = el.className.split(" ").filter(function(c) {
+	            return c.lastIndexOf(prefix, 0) !== 0;
+	        });
+	        el.className = $.trim(classes.join(" "));
+	    });
+	    return this;
+	};
+});
